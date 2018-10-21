@@ -211,9 +211,7 @@ methods: {
 ```
 
 
-<center>
 ![](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/08.png)
-</center>
 
 ## 绑定样式 v-bind
 ```html
@@ -284,9 +282,7 @@ cancelEditing() {
 ```
 
 
-<center>
 ![](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/09.png)
-</center>
 
 ## 删除列表
 ```html
@@ -320,9 +316,7 @@ computed: {
 }
 ```
 
-<center>
 ![](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/10.gif)
-</center>
 
 ## 清除已完成的任务 v-show
 ```html
@@ -407,9 +401,7 @@ watch: {
 
 一旦 todos 列表改变了，可以通过浏览器的开发工具看到它们被存储在本地。
 
-<center>
 ![](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/11.jpg)
-</center>
 
 
 

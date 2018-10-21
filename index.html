@@ -37,6 +37,19 @@
                 <strong>{{activeTodos.length}}</strong> item(s) left
             </span>
 
+            <!-- Remove this if you don't implement routing -->
+            <ul class="filters">
+                <li>
+                    <a class="selected" href="#/">All</a>
+                </li>
+                <li>
+                    <a href="#/active">Active</a>
+                </li>
+                <li>
+                    <a href="#/completed">Completed</a>
+                </li>
+            </ul>
+
             <button class="clear-completed" @click="clearCompleted" v-show="completedTodos.length">Clear
                 completed</button>
 

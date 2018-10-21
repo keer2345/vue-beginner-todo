@@ -5,18 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Beginner Todo App</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <style>
+    </style>
 </head>
 
 <body>
-    <div class="app">
+    <div id="app" class="todoapp">
+        <header class="header">
+            <h1>{{title}}</h1>
+            <input class="new-todo" placeholder="WWhat needs to be done?"
+                autofocus @keyup.enter="createTodo" />
+        </header>
+        <section class="main" v-if="todos.length">
+            <ul class="todo-list">
+                <li v-for="(todo,index) in todos" :class="{completed:todo.isDone,editing:todo===editing}">
+                    <div class="view">
+                        <input type="checkbox" class="toggle" v-model="todo.isDone">
+                        <label @dblclick="startEditing(todo)">{{todo.text}}</label>
+                        <button class="destroy" @click="destroyTodo(todo)"></button>
+                    </div>
+                    <input class="edit" @keyup.esc="cancelEditing"
+                        @keyup.enter="finishEditing" @blur="cancelEditing"
+                        :value="todo.text">
+                </li>
+            </ul>
+        </section>
+        <footer class="footer" v-if="todos.length">
+            <span class="todo-count">
+                <strong>{{activeTodos.length}}</strong> item(s) left
+            </span>
 
+            <button class="clear-completed" @click="clearCompleted" v-show="completedTodos.length">Clear
+                completed</button>
+
+        </footer>
     </div>
 
-
-    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/vue/dist/vue.js"></script>
     <script src="node_modules/vue-router/dist/vue-router.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

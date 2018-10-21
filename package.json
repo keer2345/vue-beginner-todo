@@ -2,6 +2,10 @@
   "name": "vue-beginner-todo",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "serve": "npx live-server --entry-file=index.html",
+    "start": "npm run serve"
+  },
   "license": "MIT",
   "dependencies": {
     "todomvc-app-css": "^2.1.2",

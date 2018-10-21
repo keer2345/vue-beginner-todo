@@ -2,7 +2,7 @@
 ## Learn by building a Todo App
 
 
-![1](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/07.jpg)
+![](https://raw.githubusercontent.com/keer2345/storehouse/master/hexo/images/2018/10/07.jpg)
 
 本文我们将创建一个基础的 Vue.js，从而学会构建 Todo App 以有助于践学 Vue JS 。
 
